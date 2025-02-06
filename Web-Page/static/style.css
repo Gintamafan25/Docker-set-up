@@ -1,0 +1,88 @@
+header {
+    
+    background-image: url("main image.jpg");
+    background-size: 1500px 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 500px;
+    padding-bottom: 100px;;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+}
+
+.info-div {
+    
+    padding-left: 200px;
+    padding-right: 200px;
+    border-style: solid;
+    border-width: 10px;
+    margin-left: 300px;
+    margin-right: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', "Calibri", 'Trebuchet MS', "sans-serif";
+    font-size: 34px;
+    font-weight: 200;
+    margin-bottom: 100px;
+}
+
+body {
+    background-image: linear-gradient(135deg,navy, crimson);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+iframe {
+    margin-left: 500px;
+}
+
+p {
+    color: coral;
+}
+
+.hours {
+    padding-left: 200px;
+    padding-right: 200px;
+    border-style: dotted;
+    border-width: 10px;
+    margin-left: 300px;
+    margin-right: 300px;
+    font-family: 'Impact', 'Haettenschweiler', 'Arial Narrow Bold', 'sans-serif';
+    font-size: 34px;
+    font-weight: 100;
+    margin-bottom: 100px;
+
+}
+
+#daily-menu {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+#food-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.food-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.food-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.food-item h3 {
+    margin: 0;
+}
