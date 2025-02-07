@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<section id="daily-menu">
+    <h2>Today's Menu</h2>
+    <div id="food-list">
+        <p>
+            food image here
+        </p>
+    </div>
+    
+    <section class="menu">
+        <h1>Hot Food Menu</h1>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="path/to/food1.jpg" alt="Food 1">
+                <h2>Food Item 1</h2>
+                <p>Delicious description of the food item.</p>
+                <span class="price">$9.99</span>
+            </div>
+            <div class="menu-item">
+                <img src="path/to/food2.jpg" alt="Food 2">
+                <h2>Food Item 2</h2>
+                <p>Another tasty description.</p>
+                <span class="price">$8.49</span>
+            </div>
+            <!-- Add more items -->
+        </div>
+    </section>
+</section>
+
+
+{% endblock %}

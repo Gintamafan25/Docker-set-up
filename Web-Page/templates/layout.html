@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html language="en">
@@ -5,16 +6,30 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="/static/style.css" rel="stylesheet">
+        
         <title>La Colonia</title>
     </head>
     <body>
+        <nav class="navbar">
+            <div class="menu-icon" onclick="toggleMenu()">
+                &#9776;
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/"> Home</a> </li>
+                <li><a href="/menu"> Menu </a> </li>
+                <li><a href="/services"> Services</a></li>
+                
+            </ul>
+            <button id="language-toggle"> Español </button>
+        </nav>
         <header>
-           
         </header>
+        
 
         <main>
             {% block main %} {% endblock %}
         </main>
+        <script src="/static/script.js"></script>
     </body>
 
 

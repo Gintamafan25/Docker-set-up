@@ -25,6 +25,10 @@ def menu():
     menu_items = load_menu()
     return render_template("menu.html", menu=menu_items)
 
+@app.route("/services")
+def services():
+    return render_template("services.html")
+
 @app.route("/update_menu", methods=["GET", "POST"])
 def update_menu():
     if request.method == "POST":

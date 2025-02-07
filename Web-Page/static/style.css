@@ -1,7 +1,7 @@
 header {
     
     background-image: url("main image.jpg");
-    background-size: 1500px 500px;
+    background-size: 2000px 600px;
     background-repeat: no-repeat;
     background-position: center;
     padding-top: 500px;
@@ -29,9 +29,169 @@ h1 {
 
 body {
     background-image: linear-gradient(135deg,navy, crimson);
+    
     background-repeat: no-repeat;
     background-attachment: fixed;
+    animation: gradientAnimation 20s ease infinite;
 }
+
+@keyframes gradientAnimation {
+    0% {
+        background-image: linear-gradient(0deg, navy, crimson); 
+    }
+    2% {
+        background-image: linear-gradient(5deg, navy, crimson); 
+    }
+    4% {
+        background-image: linear-gradient(10deg, navy, crimson); 
+    }
+    6% {
+        background-image: linear-gradient(15deg, navy, crimson); 
+    }
+    8% {
+        background-image: linear-gradient(20deg, navy, crimson); 
+    }
+    10% {
+        background-image: linear-gradient(25deg, navy, crimson); 
+    }
+    12% {
+        background-image: linear-gradient(30deg, navy, crimson); 
+    }
+    14% {
+        background-image: linear-gradient(35deg, navy, crimson); 
+    }
+    16% {
+        background-image: linear-gradient(40deg, navy, crimson); 
+    }
+    18% {
+        background-image: linear-gradient(45deg, navy, crimson); 
+    }
+    20% {
+        background-image: linear-gradient(50deg, navy, crimson); 
+    }
+    22% {
+        background-image: linear-gradient(55deg, navy, crimson); 
+    }
+    24% {
+        background-image: linear-gradient(60deg, navy, crimson); 
+    }
+    26% {
+        background-image: linear-gradient(65deg, navy, crimson); 
+    }
+    28% {
+        background-image: linear-gradient(70deg, navy, crimson); 
+    }
+    30% {
+        background-image: linear-gradient(75deg, navy, crimson); 
+    }
+    32% {
+        background-image: linear-gradient(80deg, navy, crimson); 
+    }
+    34% {
+        background-image: linear-gradient(85deg, navy, crimson); 
+    }
+    36% {
+        background-image: linear-gradient(90deg, navy, crimson); 
+    }
+    38% {
+        background-image: linear-gradient(95deg, navy, crimson); 
+    }
+    40% {
+        background-image: linear-gradient(100deg, navy, crimson); 
+    }
+    42% {
+        background-image: linear-gradient(105deg, navy, crimson); 
+    }
+    44% {
+        background-image: linear-gradient(110deg, navy, crimson); 
+    }
+    46% {
+        background-image: linear-gradient(115deg, navy, crimson); 
+    }
+    48% {
+        background-image: linear-gradient(120deg, navy, crimson); 
+    }
+    50% {
+        background-image: linear-gradient(125deg, navy, crimson); 
+    }
+    52% {
+        background-image: linear-gradient(120deg, navy, crimson); 
+    }
+    54% {
+        background-image: linear-gradient(115deg, navy, crimson); 
+    }
+    56% {
+        background-image: linear-gradient(110deg, navy, crimson); 
+    }
+    58% {
+        background-image: linear-gradient(105deg, navy, crimson); 
+    }
+    60% {
+        background-image: linear-gradient(100deg, navy, crimson); 
+    }
+    62% {
+        background-image: linear-gradient(95deg, navy, crimson); 
+    }
+    64% {
+        background-image: linear-gradient(90deg, navy, crimson); 
+    }
+    66% {
+        background-image: linear-gradient(85deg, navy, crimson); 
+    }
+    68% {
+        background-image: linear-gradient(80deg, navy, crimson); 
+    }
+    70% {
+        background-image: linear-gradient(75deg, navy, crimson); 
+    }
+    72% {
+        background-image: linear-gradient(70deg, navy, crimson); 
+    }
+    74% {
+        background-image: linear-gradient(65deg, navy, crimson); 
+    }
+    76% {
+        background-image: linear-gradient(60deg, navy, crimson); 
+    }
+    78% {
+        background-image: linear-gradient(55deg, navy, crimson); 
+    }
+    80% {
+        background-image: linear-gradient(50deg, navy, crimson); 
+    }
+    82% {
+        background-image: linear-gradient(45deg, navy, crimson); 
+    }
+    84% {
+        background-image: linear-gradient(40deg, navy, crimson); 
+    }
+    86% {
+        background-image: linear-gradient(35deg, navy, crimson); 
+    }
+    88% {
+        background-image: linear-gradient(30deg, navy, crimson); 
+    }
+    90% {
+        background-image: linear-gradient(25deg, navy, crimson); 
+    }
+    92% {
+        background-image: linear-gradient(20deg, navy, crimson); 
+    }
+    94% {
+        background-image: linear-gradient(15deg, navy, crimson); 
+    }
+    96% {
+        background-image: linear-gradient(10deg, navy, crimson); 
+    }
+    98% {
+        background-image: linear-gradient(5deg, navy, crimson); 
+    }
+    100% {
+        background-image: linear-gradient(0deg, navy, crimson); 
+    }
+    
+}
+    
 
 iframe {
     margin-left: 500px;
@@ -85,4 +245,151 @@ p {
 
 .food-item h3 {
     margin: 0;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    position: absolute;
+    top: 60px;
+    left: -250px; /* Initially hidden */
+    background-color: #333;
+    width: 200px;
+    height: 100vh;
+    padding: 0;
+    transition: left 0.3s ease-in-out;
+}
+
+.nav-links li {
+    padding: 15px;
+    border-bottom: 1px solid gray;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-links.active {
+    left: 0;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;  /* Allows the blocks to wrap to the next line on smaller screens */
+    justify-content: space-between;
+    gap: 20px;  /* Space between the blocks */
+    padding: 20px;
+}
+
+.service {
+    display: flex;
+    align-items: center;  /* Centers the content vertically */
+    width: calc(33.33% - 20px);  /* 3 columns, minus the gap */
+    border: 1px solid #ccc;  /* Optional: for visual separation */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.service-name {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.service-description {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.service-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 20px;
+    width: 150px;  /* Adjust width as needed */
+}
+
+/* Make adjustments for smaller screens */
+@media (max-width: 768px) {
+    .service {
+        width: calc(50% - 20px);  /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .service {
+        width: 100%;  /* Single column on small screens */
+    }
+    .service-image {
+        margin-top: 10px;
+    }
+}
+
+.menu {
+    text-align: center;
+    padding: 20px;
+}
+
+.menu h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.menu-item h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.menu-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+.price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: crimson;
+    display: block;
+    margin-top: 10px;
 }
