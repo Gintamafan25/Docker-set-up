@@ -7,15 +7,16 @@ app = Flask(__name__)
 
 # Load menu from file
 MENU_FILE = os.path.join(os.path.dirname(__file__), "/workspaces/ubuntu/Web-Page/templates/menu.json")
-def load_menu():
+SERVICE_FILE = os.path.join(os.path.dirname(__file__), "/workspaces/ubuntu/Web-Page/templates/services.json" )
+def load_file(document):
     try:
-        print(f"Attempting to open: {MENU_FILE}")  # Debug print
-        with open(MENU_FILE, "r") as file:
+        print(f"Attempting to open: {document}")  # Debug print
+        with open(document, "r") as file:
             data = json.load(file)
             print(f"Loaded data: {data}")  # Debug print
             return data
     except FileNotFoundError:
-        print(f"File not found: {MENU_FILE}")  # Debug print
+        print(f"File not found: {document}")  # Debug print
         return {"empty3": []}
     except json.JSONDecodeError as e:
         print(f"JSON decode error: {e}")  # Debug print
@@ -23,8 +24,8 @@ def load_menu():
     except Exception as e:
         print(f"Unexpected error: {type(e).__name__}: {e}")  # Debug print
         return {"empty": []}
-def save_menu(menu):
-    with open(MENU_FILE, "w") as file:
+def save_menu(menu, document):
+    with open(document, "w") as file:
         json.dump(menu, file, indent=4)
 
 @app.route("/")
@@ -33,12 +34,13 @@ def home():
 
 @app.route("/menu")
 def menu():
-    menu_items = load_menu()
+    menu_items = load_file(MENU_FILE)
     return render_template("menu.html", menu=menu_items)
 
 @app.route("/services")
 def services():
-    return render_template("services.html")
+    services = load_file(SERVICE_FILE)
+    return render_template("services.html", services=services)
 
 @app.route("/update_menu", methods=["GET", "POST"])
 def update_menu():

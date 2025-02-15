@@ -1,59 +1,28 @@
 {% extends "layout.html" %}
 
 {% block main %}
+    
     <section class="services">
-        <div class="service">
-            <div class="service-content">
-                <h2 class="service-name" 
-                    data-en="Boss" 
-                    data-es="Jefe">
-                    Boss
-                </h2>
-                <p class="service-description" 
-                data-en="This is a brief description of service 1. It explains what the service is about in a few lines." 
-                data-es="Esta es una breve descripción del servicio 1. Explica de qué trata el servicio en unas pocas líneas.">
-                    This is a brief description of service 1. It explains what the service is about in a few lines.
-                </p>
+        {% for service, description in services.items() %}
+            <div class="service">
+                <div class="service-content">
+                    <h2 class="service-name" 
+                        data-en="{{description[0]}}" 
+                        data-es="{{service}}">
+                        
+                    </h2>
+                    <p class="service-description" 
+                    data-en="{{description[1]}}" 
+                    data-es="{{description[2]}}">
+                        
+                    </p>
+                </div>
+                <div class="service-image">
+                    <img src="{{description[3]}}" alt="Service 1 Image">
+                </div>
             </div>
-            <div class="service-image">
-                <img src="path/to/service1.jpg" alt="Service 1 Image">
-            </div>
-        </div>
-
-        <div class="service">
-            <div class="service-content">
-                <h2 class="service-name" 
-                    data-en="Money Wires" 
-                    data-es="Giros de Dinero">
-                    Money Wires
-                </h2>
-                <p class="service-description" 
-                data-en="This is a brief description of service 2. It explains what the service is about in a few lines." 
-                data-es="Esta es una breve descripción del servicio 2. Explica de qué trata el servicio en unas pocas líneas.">
-                    This is a brief description of service 2. It explains what the service is about in a few lines.
-                </p>
-            </div>
-            <div class="service-image">
-                <img src="path/to/service2.jpg" alt="Service 2 Image">
-            </div>
-        </div>
-
-        <div class="service">
-            <div class="service-content">
-                <h2 class="service-name" 
-                    data-en="Lottery" 
-                    data-es="Lotería">
-                    Lottery
-                </h2>
-                <p class="service-description" 
-                data-en="Brief description" 
-                data-es="Descripción breve">
-                    Brief description
-                </p>
-            </div>
-            <div class="service-image">
-                <img>
-            </div>
-        </div>
+        {% endfor %}
+    
+        
     </section>
 {% endblock %}

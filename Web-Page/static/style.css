@@ -216,11 +216,11 @@ p {
 }
 
 #daily-menu {
-    background-color: #f4f4f4;
+    background-color: crimson;
     padding: 20px;
     border-radius: 8px;
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 20px auto;
 }
 
@@ -344,17 +344,19 @@ p {
 .menu {
     text-align: center;
     padding: 20px;
+    background-color: lightcyan;
+    
 }
 
 .menu h1 {
-    font-size: 2.5em;
+    font-size: 3.0em;
     margin-bottom: 20px;
 }
 
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+    gap: 40px;
     justify-content: center;
 }
 
@@ -367,7 +369,7 @@ p {
 }
 
 .menu-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.4);
 }
 
 .menu-item img {
