@@ -6,8 +6,8 @@ app = Flask(__name__)
 
 
 # Load menu from file
-MENU_FILE = os.path.join(os.path.dirname(__file__), "/workspaces/ubuntu/Web-Page/templates/menu.json")
-SERVICE_FILE = os.path.join(os.path.dirname(__file__), "/workspaces/ubuntu/Web-Page/templates/services.json" )
+MENU_FILE = os.path.join("templates", "menu.json")
+SERVICE_FILE = os.path.join("templates", "services.json")
 def load_file(document):
     try:
         print(f"Attempting to open: {document}")  # Debug print
@@ -52,4 +52,5 @@ def update_menu():
     return render_template("update_menu.html")
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0")
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
